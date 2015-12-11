@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
-<%
-	String no = request.getParameter("no");
-%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%> 	
+
 
 <html>
 <head>
@@ -12,7 +13,7 @@
 <body>
 	<form method="post" action="/guestBook2/gb"><!-- get -->
 	<input type='hidden' name="a" value="delete">
-	<input type='hidden' name="no" value="<%=no%>"><!-- post -->
+	<input type='hidden' name="no" value="${vo.no}"><!-- post -->
 	<table>
 		<tr>
 			<td>비밀번호</td>
